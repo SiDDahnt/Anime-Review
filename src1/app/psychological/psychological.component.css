@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+}
+h1 {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 1000;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    padding-top: 0.5em;
+}
+.back {
+    background-image: url(../../assets/Images/back4.jpg);
+}
+.all {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2em;
+}
+.anime{
+    padding: 1em;
+}
+mat-card {
+    width: 400px;
+    height: 425px;
+}
+.anime > mat-card {
+    transition: 0.4s ease;
+}
+mat-card:hover {
+    scale: 1.04;
+    box-shadow: 10px 26px 100px rgba(0, 0, 0, 0.648);
+}
+mat-card {
+    border-style: solid;
+    border-color: black;
+    border-width: 0.2em;
+    border-radius: 0.5em;
+}
+mat-card-title {
+    margin-left: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+    font-weight: 600;
+    font-size: larger;
+}
+img {
+    margin: 0.35em;
+}
+.btn {
+    border-radius: 30em;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff; 
+    margin-right: 2em;   
+}
+.btn::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #ff6c6c 0%, #e9d6d6 100%);
+    transition: 0.5s ease;
+    z-index: -1;
+}
+.btn:hover::before {
+    width: 8em;
+}
+.small {
+    font-size: 11.2px;
+}
+
+@media (max-width: 768px) {
+    h1{
+        font-size: 40px;
+    }
+    mat-card {
+        width: 300px;
+        height: auto;
+    }
+}

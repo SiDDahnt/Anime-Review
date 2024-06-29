@@ -1,0 +1,22 @@
+<div class="back">
+    <h1>Reviews on {{animeName}}</h1>
+<div class="surround">
+    <div class="tableback">
+        <table>
+            <tr>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>REVIEW</th>
+            </tr>
+            <tr *ngFor="let item of reviews">
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.review}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="but">
+        <button (click)="onClick()">Home</button>
+    </div>
+</div>
+</div>

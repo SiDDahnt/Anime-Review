@@ -1,0 +1,51 @@
+<div class="back">
+    <h1>Write a Review on Your Selected Anime</h1>
+<div class="form">
+    <form [formGroup]="addReview" (ngSubmit)="saveEnteredReview()">
+        
+        <div class="entry">
+            <label for="Name">Name*</label><br>
+            <input type="text" placeholder="Enter your Name" formControlName="name" class="field"><br>
+            <small *ngIf="!addReview.get('name')?.valid && addReview.get('name')?.touched">Name Required!</small>
+        </div>
+
+        <br><br>
+
+        <div class="entry">
+            <label for="Email">Email*</label><br>
+            <input type="email" placeholder="Enter your Email Id" formControlName="email" class="field"><br>
+            <small *ngIf="!addReview.get('email')?.valid && addReview.get('email')?.touched">Correct Email Required!</small>
+        </div>
+
+        <br><br>
+
+        <div class="entry">
+            <label for="genre">Genre</label><br>
+            <input type="text" formControlName="genre" [readonly]="true" class="field autofill">
+        </div>
+
+        <br><br>
+
+        <div class="entry">
+            <label for="anime name">Anime Name</label><br>
+            <input type="text" formControlName="animeName" [readonly]="true" class="field autofill">
+        </div>
+
+        <br><br>
+
+        <div class="entry">
+            <label for="review">Write your thoughts*</label><br>
+            <textarea cols="30" rows="10" formControlName="review" placeholder="Add Your Review" class="textfield" (keydown)="countChar($event)">
+            </textarea><br>
+            <small class="text">{{count}} out of 455 characters</small><br>
+            <small *ngIf="!addReview.get('review')?.valid && addReview.get('review')?.touched">Review Required!</small>
+        </div>
+
+        <br><br>
+
+        <div class="entry">
+            <input type="submit" class="submitbtn" [disabled]="!addReview.valid">
+        </div>
+    </form>
+</div>
+</div>

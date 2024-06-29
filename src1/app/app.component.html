@@ -1,0 +1,32 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="opened=!opened">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <h4>OtakuReviews</h4>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    
+    <mat-sidenav [(opened)]="opened">
+        <ul>
+            <li><a routerLink="/" (click)="opened=!opened">Home</a></li>
+            <li><a routerLink="/action" (click)="opened=!opened">Action</a></li>
+            <li><a routerLink="/adventure" (click)="opened=!opened">Adventure</a></li>
+            <li><a routerLink="/comedy" (click)="opened=!opened">Comedy</a></li>
+            <li><a routerLink="/horror" (click)="opened=!opened">Horror</a></li>
+            <li><a routerLink="/martial_arts" (click)="opened=!opened">Martial Arts</a></li>
+            <li><a routerLink="/psychological" (click)="opened=!opened">Psychological</a></li>
+            <li><a routerLink="/romance" (click)="opened=!opened">Romance</a></li>
+            <li><a routerLink="/slice_of_life" (click)="opened=!opened">Slice of Life</a></li>
+            <li><a routerLink="/sports" (click)="opened=!opened">Sports</a></li> 
+        </ul>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-toolbar class="footer">
+    <p class="copyright">© Siddhant Saha</p>
+</mat-toolbar>

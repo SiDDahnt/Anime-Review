@@ -1,0 +1,18 @@
+<div class="back">
+    <h1>Adventure Anime</h1>
+<div class="all">
+    <div class="anime" *ngFor="let anime of adventure">
+
+        <mat-card>
+            <mat-card-title>{{anime.name}}</mat-card-title>
+            <img mat-card-img src="{{anime.img}}" alt="Photo of {{anime.name}}">
+            <mat-card-content class="small">{{anime.content}}</mat-card-content>
+            <mat-card-actions>
+                <a routerLink="/review/{{anime.name}}"><button mat-button class="btn">See Review</button></a>
+                <a routerLink="/adding/Adventure/{{anime.name}}"><button mat-button class="btn">Add Review</button></a>
+            </mat-card-actions>
+        </mat-card>    
+
+    </div>
+</div>
+</div>
