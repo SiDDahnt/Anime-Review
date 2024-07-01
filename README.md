@@ -1,1 +1,4 @@
-<video src="https://drive.google.com/file/d/1RT6gZuAikgbvK9FNKs7Pyj7ETz3PM0cR/view?usp=sharing"></video?
+
+
+https://github.com/SiDDahnt/Anime-Review/assets/115520013/350a111f-eed7-42aa-8da2-d8dc8b0e1d21
+
